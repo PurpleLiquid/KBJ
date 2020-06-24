@@ -37,5 +37,13 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Rotate(0, Input.GetAxis("Rotation") * Time.deltaTime * rotateSpeed, 0);
         }
+
+        /* Another way for movement
+        float horizontal = Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime;
+        transform.Rotate(0, horizontal, 0);
+
+        float vertical = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        transform.Translate(0, 0, vertical);
+        */
     }
 }
