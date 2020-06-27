@@ -17,7 +17,7 @@ public class ThirdPerson : MonoBehaviour
 
     void LateUpdate()
     {
-        float horizontal = Input.GetAxis("Horizontal") * rotateSpeed;
+        float horizontal = Input.GetAxis("Rotation") * rotateSpeed;
         target.transform.Rotate(0, horizontal, 0);
 
         float desiredAngle = target.transform.eulerAngles.y;
