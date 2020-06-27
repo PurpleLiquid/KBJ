@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1781566581}
-  rotateSpeed: 100
+  rotateSpeed: 2
   damping: 1
 --- !u!1 &933004878
 GameObject:
