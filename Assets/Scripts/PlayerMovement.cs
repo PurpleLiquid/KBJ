@@ -23,17 +23,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void processMovement()
     {
-        if (Input.GetButton("Horizontal")) // left and right movement
+        if (Input.GetButton("Horizontal")) // left/right movement; a/d 
         {
             transform.position += Input.GetAxis("Horizontal") * transform.right * Time.deltaTime * moveSpeed;
         }
 
-        if(Input.GetButton("Vertical")) // Forward and back movement
+        if(Input.GetButton("Vertical")) // forward/back movement; w/s
         {
             transform.position += Input.GetAxis("Vertical") * transform.forward * Time.deltaTime * moveSpeed;
         }
 
-        if (Input.GetButton("Rotation")) // Rotate player to change where it's looking
+        if (Input.GetButton("Rotation")) // Rotate player to change where it's looking; q/e
         {
             transform.Rotate(0, Input.GetAxis("Rotation") * Time.deltaTime * rotateSpeed, 0);
         }

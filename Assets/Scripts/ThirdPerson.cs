@@ -12,6 +12,7 @@ public class ThirdPerson : MonoBehaviour
 
     void Start()
     {
+        // Set offset as the distance of the camera in scene from target(Player)
         offset = target.transform.position - transform.position;
     }
 
