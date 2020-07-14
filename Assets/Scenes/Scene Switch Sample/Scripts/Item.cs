@@ -1,18 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class Item : MonoBehaviour
 {
-    [SerializeField] string itemName;
-    [SerializeField] Image icon;
-
-    public Item pickUpItem()
+    public string itemName = "New Item";
+    public Sprite icon = null;
+    
+    public void RemoveFromInventory()
     {
-        return this;
-    }
-
-    public void useItem()
-    {
-        Destroy(this);
+        Inventory.instance.Remove(this);
     }
 }

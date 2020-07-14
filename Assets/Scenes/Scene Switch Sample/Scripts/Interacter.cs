@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class DoorInteracter : MonoBehaviour
+public class Interacter : MonoBehaviour
 {
+    
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +22,7 @@ public class DoorInteracter : MonoBehaviour
         // params in order: origin, direction, hitinfo, max distance, layer mask
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 1f, layerMask))
         {
+            // If door
             if (hit.transform.gameObject.GetComponent<Door>() != null)
             {
                 hit.transform.gameObject.GetComponent<Door>().goNextRoom();

@@ -1,28 +1,27 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+// Singleton
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] GameObject inventory;
-    private bool access = false;
+    private static Inventory _instance;
 
-    void Start()
+    public static Inventory getInstance()
     {
-        // Just in case
-        inventory.SetActive(false);
+        return _instance;
     }
-    
-    void Update()
+
+    private void Awake()
     {
-        // Accessing Inventory
-        if (Input.GetKeyDown(KeyCode.I) & access == true)
+        if (_instance != null && _instance != this)
         {
-            inventory.SetActive(false);
-            access = false;
+            Destroy(this.gameObject);
         }
-        else if(Input.GetKeyDown(KeyCode.I) & access == false)
+        else
         {
-            inventory.SetActive(true);
-            access = true;
+            DontDestroyOnLoad(this);
+            _instance = this;
         }
     }
 }
