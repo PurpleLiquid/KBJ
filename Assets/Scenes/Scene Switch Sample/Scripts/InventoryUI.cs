@@ -8,11 +8,15 @@ public class InventoryUI : MonoBehaviour
 
     private void Start()
     {
-        foreach(Transform child in transform)
+        itemSlotList = new List<ItemSlot>();
+
+        foreach (Transform child in transform)
         {
             ItemSlot slot = child.GetComponent<ItemSlot>();
             itemSlotList.Add(slot);
         }
+
+        print(itemSlotList.Count);
     }
 
     public void addItemVisually(Item item)
