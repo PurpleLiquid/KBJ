@@ -4,23 +4,32 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    private List<ItemSlot> itemSlotList;
+    private List<ItemSlot> itemSlotList = new List<ItemSlot>();
 
-    private void Start()
+    private void Awake()
     {
-        itemSlotList = new List<ItemSlot>();
-
         foreach (Transform child in transform)
         {
             ItemSlot slot = child.GetComponent<ItemSlot>();
             itemSlotList.Add(slot);
         }
-
-        print(itemSlotList.Count);
     }
 
-    public void addItemVisually(Item item)
+    public void addItemVisually(Item newItem)
     {
+        print("@ UI");
+        print(itemSlotList.Count);
 
+        for (int i = 0; i < itemSlotList.Count; i++)
+        {
+            print(itemSlotList[i].hasItem() == false);
+
+            if(itemSlotList[i].hasItem() == false)
+            {
+                print("Ui Adding");
+                itemSlotList[i].setItem(newItem);
+                i = itemSlotList.Count + 1; // Stop loop
+            }
+        }
     }
 }

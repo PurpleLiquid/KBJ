@@ -1,16 +1,30 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemSlot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Item item = null;
+    public Image icon;
+
+    public void setItem(Item newItem)
     {
-        
+        Inventory inv = Inventory.getInstance();
+
+        item = newItem;
+
+        icon.sprite = item.icon;
+        icon.enabled = inv.isAccessed();
+        print("Here");
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool hasItem()
     {
-        
+        return item != null;
+    }
+
+    public void clearSlot()
+    {
+        item = null;
+        icon = null;
     }
 }

@@ -27,6 +27,12 @@ public class Interacter : MonoBehaviour
             {
                 hit.transform.gameObject.GetComponent<Door>().goNextRoom();
             }
+
+            // If Key
+            if (hit.transform.gameObject.GetComponent<ItemPickup>() != null)
+            {
+                hit.transform.gameObject.GetComponent<ItemPickup>().pickUpItem();
+            }
         }
     }
 }

@@ -53,9 +53,12 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void addItem(Item item)
+    public void addItem(Item newItem)
     {
-        itemList.Add(item);
+        print("Adding item");
+        itemList.Add(newItem);
+
+        ui.addItemVisually(newItem);
     }
 
     public Item getItem(string itemName)
@@ -74,5 +77,11 @@ public class Inventory : MonoBehaviour
 
         // Didn't find it
         return null;
+    }
+
+    // This is to check if the UI is active or not
+    public bool isAccessed()
+    {
+        return accessed;
     }
 }
