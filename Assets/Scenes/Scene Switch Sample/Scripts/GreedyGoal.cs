@@ -11,10 +11,12 @@ public class GreedyGoal : MonoBehaviour
 {
     public void lockedGoal()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            // Will change this later
-            if (true)
+            Item key = Inventory.getInstance().getItem("Key");
+
+            // Need to make this better
+            if (key != null)
             {
                 #if UNITY_EDITOR
                 // Stops editor from playing

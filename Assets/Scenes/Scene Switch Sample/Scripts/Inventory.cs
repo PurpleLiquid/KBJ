@@ -55,7 +55,6 @@ public class Inventory : MonoBehaviour
 
     public void addItem(Item newItem)
     {
-        print("Adding item");
         itemList.Add(newItem);
 
         ui.addItemVisually(newItem);

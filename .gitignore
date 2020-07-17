@@ -71,7 +71,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-# Don't plan to utilize these
+# Things that are important but are annoying
 Editor.meta
 ProjectVersion.txt
 manifest.json

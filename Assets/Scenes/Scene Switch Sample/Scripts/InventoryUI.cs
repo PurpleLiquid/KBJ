@@ -17,16 +17,10 @@ public class InventoryUI : MonoBehaviour
 
     public void addItemVisually(Item newItem)
     {
-        print("@ UI");
-        print(itemSlotList.Count);
-
         for (int i = 0; i < itemSlotList.Count; i++)
         {
-            print(itemSlotList[i].hasItem() == false);
-
             if(itemSlotList[i].hasItem() == false)
             {
-                print("Ui Adding");
                 itemSlotList[i].setItem(newItem);
                 i = itemSlotList.Count + 1; // Stop loop
             }

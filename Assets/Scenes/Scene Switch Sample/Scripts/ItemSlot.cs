@@ -13,8 +13,7 @@ public class ItemSlot : MonoBehaviour
         item = newItem;
 
         icon.sprite = item.icon;
-        icon.enabled = inv.isAccessed();
-        print("Here");
+        icon.enabled = true;
     }
 
     public bool hasItem()
@@ -25,6 +24,7 @@ public class ItemSlot : MonoBehaviour
     public void clearSlot()
     {
         item = null;
-        icon = null;
+        icon.sprite = null;
+        icon.enabled = false;
     }
 }

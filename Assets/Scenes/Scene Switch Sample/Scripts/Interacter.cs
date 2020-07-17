@@ -33,6 +33,12 @@ public class Interacter : MonoBehaviour
             {
                 hit.transform.gameObject.GetComponent<ItemPickup>().pickUpItem();
             }
+
+            // If Goal
+            if (hit.transform.gameObject.GetComponent<GreedyGoal>() != null)
+            {
+                hit.transform.gameObject.GetComponent<GreedyGoal>().lockedGoal();
+            }
         }
     }
 }

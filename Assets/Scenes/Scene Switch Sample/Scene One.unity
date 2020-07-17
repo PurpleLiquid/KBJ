@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 346722771}
   - component: {fileID: 346722770}
   - component: {fileID: 346722775}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Slot (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,6 +894,7 @@ GameObject:
   - component: {fileID: 716486751}
   - component: {fileID: 716486750}
   - component: {fileID: 716486749}
+  - component: {fileID: 716486754}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -992,6 +993,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &716486754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716486748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e28b190d3c9fc7419106eb7ee46d06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &843193068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,7 +1133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &989101397
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1208,7 +1221,7 @@ GameObject:
   - component: {fileID: 1086893417}
   - component: {fileID: 1086893416}
   - component: {fileID: 1086893421}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Slot (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1484,7 +1497,7 @@ GameObject:
   - component: {fileID: 1173097098}
   - component: {fileID: 1173097097}
   - component: {fileID: 1173097102}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Slot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1636,7 +1649,7 @@ GameObject:
   - component: {fileID: 1604864954}
   - component: {fileID: 1604864953}
   - component: {fileID: 1604864958}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
