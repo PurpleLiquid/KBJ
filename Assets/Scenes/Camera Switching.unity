@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 439944936}
   - component: {fileID: 439944938}
   m_Layer: 0
-  m_Name: Third Person View
+  m_Name: Third Person Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dbc65914d3184488127c6b289d5d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 537692965}
   rotateSpeed: 100
   damping: 1
 --- !u!1 &537692962
@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 1846446842}
   - component: {fileID: 1846446841}
   m_Layer: 0
-  m_Name: First Person View
+  m_Name: First Person Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
