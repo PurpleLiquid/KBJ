@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 4f;
     [SerializeField] float rotateSpeed = 100f;
+    
+    public Camera fpCam;
+    public Camera tpCam;
+    public bool fpMode;
 
     Rigidbody rigidBody;
 
@@ -13,12 +17,30 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        tpCam.gameObject.SetActive(false);
+        fpCam.gameObject.SetActive(true);
+        fpMode = true;
+
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         processMovement();
+        if (Input.GetKeyDown(KeyCode.M) & fpMode == true)
+        {
+            tpCam.gameObject.SetActive(true);
+            fpCam.gameObject.SetActive(false);
+            fpMode = false;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.M) & fpMode == false)
+        {
+            tpCam.gameObject.SetActive(false);
+            fpCam.gameObject.SetActive(true);
+            fpMode = true;
+        }
+
     }
 
     private void processMovement()
@@ -33,10 +55,10 @@ public class PlayerMovement : MonoBehaviour
             transform.position += Input.GetAxis("Vertical") * transform.forward * Time.deltaTime * moveSpeed;
         }
 
-        if (Input.GetButton("Rotation")) // Rotate player to change where it's looking
-        {
-            transform.Rotate(0, Input.GetAxis("Rotation") * Time.deltaTime * rotateSpeed, 0);
-        }
+        //if (Input.GetButton("Rotation")) // Rotate player to change where it's looking
+        //{
+        //    transform.Rotate(0, Input.GetAxis("Rotation") * Time.deltaTime * rotateSpeed, 0);
+        //}
 
         /* Another way for movement
         float horizontal = Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime;
