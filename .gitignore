@@ -73,5 +73,6 @@ crashlytics-build.properties
 
 # Things that are important but are annoying
 Editor.meta
-ProjectVersion.txt
+ProjectSettings/ProjectVersion.txt
+Packages/packages-lock.json
 manifest.json
