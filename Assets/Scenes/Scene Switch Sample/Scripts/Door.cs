@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
+    [SerializeField] Animator animator;
+
     public void goNextRoom()
     {
         // Get current Scene
@@ -13,6 +13,8 @@ public class Door : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            animator.SetTrigger("FadeOut");
+
             if (sceneName == "Scene One")
             {
                 SceneManager.LoadScene("Scene Two");
