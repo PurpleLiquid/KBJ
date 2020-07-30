@@ -15,13 +15,13 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    public void addItemVisually(Item newItem)
+    public void AddItemVisually(Item newItem)
     {
         for (int i = 0; i < itemSlotList.Count; i++)
         {
-            if(itemSlotList[i].hasItem() == false)
+            if(itemSlotList[i].HasItem() == false)
             {
-                itemSlotList[i].setItem(newItem);
+                itemSlotList[i].SetItem(newItem);
                 i = itemSlotList.Count + 1; // Stop loop
             }
         }

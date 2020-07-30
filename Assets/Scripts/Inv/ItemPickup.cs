@@ -4,11 +4,11 @@ public class ItemPickup : MonoBehaviour
 {
     [SerializeField] Item item;
     
-    public void pickUpItem()
+    public void PickUpItem()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            Inventory.getInstance().addItem(item);
+            Inventory.getInstance().AddItem(item);
             Destroy(gameObject);
         }
     }

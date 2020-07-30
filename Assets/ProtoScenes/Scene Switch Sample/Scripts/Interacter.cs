@@ -31,7 +31,7 @@ public class Interacter : MonoBehaviour
             // If Key
             if (hit.transform.gameObject.GetComponent<ItemPickup>() != null)
             {
-                hit.transform.gameObject.GetComponent<ItemPickup>().pickUpItem();
+                hit.transform.gameObject.GetComponent<ItemPickup>().PickUpItem();
             }
 
             // If Goal

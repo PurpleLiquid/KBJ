@@ -16,10 +16,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        processMovement();
+        ProcessMovement();
     }
 
-    private void processMovement()
+    private void ProcessMovement()
     {
         if (Input.GetButton("Horizontal")) // left/right movement; a/d 
         {

@@ -53,14 +53,14 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void addItem(Item newItem)
+    public void AddItem(Item newItem)
     {
         itemList.Add(newItem);
 
-        ui.addItemVisually(newItem);
+        ui.AddItemVisually(newItem);
     }
 
-    public Item getItem(string itemName)
+    public Item GetItem(string itemName)
     {
         Item item = null;
 
@@ -79,7 +79,7 @@ public class Inventory : MonoBehaviour
     }
 
     // This is to check if the UI is active or not
-    public bool isAccessed()
+    public bool IsAccessed()
     {
         return accessed;
     }

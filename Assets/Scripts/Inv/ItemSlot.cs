@@ -6,7 +6,7 @@ public class ItemSlot : MonoBehaviour
     private Item item = null;
     public Image icon;
 
-    public void setItem(Item newItem)
+    public void SetItem(Item newItem)
     {
         Inventory inv = Inventory.getInstance();
 
@@ -16,12 +16,12 @@ public class ItemSlot : MonoBehaviour
         icon.enabled = true;
     }
 
-    public bool hasItem()
+    public bool HasItem()
     {
         return item != null;
     }
 
-    public void clearSlot()
+    public void ClearSlot()
     {
         item = null;
         icon.sprite = null;

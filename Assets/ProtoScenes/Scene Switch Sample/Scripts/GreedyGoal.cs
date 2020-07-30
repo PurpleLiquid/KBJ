@@ -13,7 +13,7 @@ public class GreedyGoal : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            Item key = Inventory.getInstance().getItem("Key");
+            Item key = Inventory.getInstance().GetItem("Key");
 
             // Need to make this better
             if (key != null)
