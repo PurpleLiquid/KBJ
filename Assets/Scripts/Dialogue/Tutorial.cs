@@ -15,4 +15,13 @@ public class Tutorial : MonoBehaviour
     {
         dm.StartDialogue(tutorialDialogue.dialogue);
     }
+
+    void Update()
+    {
+        // Right Enter key on windows
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            dm.DisplayNextSentence();
+        }
+    }
 }
