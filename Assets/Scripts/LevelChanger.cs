@@ -16,20 +16,27 @@ public class LevelChanger : MonoBehaviour
 {
     [SerializeField] Animator animator;
 
+    private string nextScene = "";
+
     public void Fade()
     {
         animator.SetTrigger("FadeOut");
     }
 
+    public void PlayNextScene()
+    {
+        SceneManager.LoadScene(nextScene);
+    }
+
     // ================  Title Screen  ========================
     public void Play()
     {
-        print("Pressing Play");
+        nextScene = "Foyer";
     }
 
     public void Tutorial()
     {
-        SceneManager.LoadScene("Tutorial");
+        nextScene = "Tutorial";
     }
 
     public void Exit()
