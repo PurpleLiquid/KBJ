@@ -4,6 +4,10 @@ using UnityEngine.AI;
 public class WeepingAngel : MonoBehaviour
 {
     [SerializeField] Transform target;
+
+    // This is the range when it changes models to a scarier version
+    [SerializeField] float thirstyRange = 3.75f;
+
     [SerializeField] float visionRange = 7.5f;
 
     NavMeshAgent navMeshAgent;

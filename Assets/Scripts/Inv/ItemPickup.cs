@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 
-public class ItemPickup : MonoBehaviour
+public class ItemPickup : Interactable
 {
     [SerializeField] Item item;
     
-    public void PickUpItem()
+    public override void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Inventory.getInstance().AddItem(item);
-            Destroy(gameObject);
-        }
+        Inventory.getInstance().AddItem(item);
+        Destroy(gameObject);
     }
 }

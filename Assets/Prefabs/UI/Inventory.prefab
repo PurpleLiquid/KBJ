@@ -560,7 +560,6 @@ GameObject:
   - component: {fileID: 5897394854094607577}
   - component: {fileID: 5897394854094607576}
   - component: {fileID: 5897394854094607583}
-  - component: {fileID: 5897394854094607582}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -661,25 +660,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 5897394853147082253}
---- !u!95 &5897394854094607582
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5897394854094607581}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5897394854784601250
 GameObject:
   m_ObjectHideFlags: 0

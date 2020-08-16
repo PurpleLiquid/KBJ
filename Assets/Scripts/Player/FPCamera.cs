@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-public class WIPFirstPerson : MonoBehaviour
+public class FPCamera : MonoBehaviour
 {
-    public float lookSpeed = 500f;
-    public bool thirdPersonMode = false;
+    [SerializeField] float lookSpeed = 500f;
     [SerializeField] Transform target;
-	float clampRotation = 0f;
+
+    private float clampRotation = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,18 +28,17 @@ public class WIPFirstPerson : MonoBehaviour
     private void firstPerson()
     {
         float xAxis = Input.GetAxis("Mouse X") * lookSpeed * Time.deltaTime;
-		float yAxis = Input.GetAxis("Mouse Y") * lookSpeed * Time.deltaTime;
-		
-		clampRotation -= yAxis;
-		clampRotation = Mathf.Clamp(clampRotation, -90f, 90f);
-		
-		//x-axis rotation
+        float yAxis = Input.GetAxis("Mouse Y") * lookSpeed * Time.deltaTime;
+
+        clampRotation -= yAxis;
+        clampRotation = Mathf.Clamp(clampRotation, -90f, 90f);
+
+        //x-axis rotation
         target.Rotate(Vector3.up * xAxis);
 
         //y-axis rotation
         //transform.Rotate(Vector3.left * yAxis);
-		transform.localRotation = Quaternion.Euler(clampRotation, 0f, 0f);
+        transform.localRotation = Quaternion.Euler(clampRotation, 0f, 0f);
 
     }
-
 }

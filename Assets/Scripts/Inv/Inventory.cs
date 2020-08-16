@@ -35,7 +35,7 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         // Just in case
-        ui.transform.gameObject.SetActive(false);
+        ui.gameObject.SetActive(false);
     }
 
     private void Update()
