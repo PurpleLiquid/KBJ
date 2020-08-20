@@ -16,7 +16,7 @@ public class LockSlot : MonoBehaviour
         image.sprite = lockSymbols[index];
     }
 
-    public void switchUpperSymbol()
+    public void SwitchUpperSymbol()
     {
         if(index == 0)
         {
@@ -31,7 +31,7 @@ public class LockSlot : MonoBehaviour
         image.sprite = lockSymbols[index];
     }
 
-    public void switchBelowSymbol()
+    public void SwitchBelowSymbol()
     {
         if (index == (lockSymbols.Count - 1))
         {
@@ -44,5 +44,10 @@ public class LockSlot : MonoBehaviour
 
         Image image = transform.GetChild(0).GetComponent<Image>();
         image.sprite = lockSymbols[index];
+    }
+
+    public int GetIndex()
+    {
+        return index;
     }
 }

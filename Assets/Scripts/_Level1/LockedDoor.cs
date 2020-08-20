@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 // This script should attach to a door
 public class LockedDoor : Interactable
 {
-    [SerializeField] LockUI ui;
     [SerializeField] Transform player;
     [SerializeField] Camera fpCam;
     [SerializeField] Image reticle;
+    [SerializeField] LockUI ui;
 
     private PlayerMovement pm;
     private FPCamera fpC;
@@ -23,12 +25,28 @@ public class LockedDoor : Interactable
 
     public override void Interact()
     {
-        // Disable player and free cursor
+        // Disable player ,free cursor, and start activate lock script
         ui.gameObject.SetActive(true);
         pm.enabled = false;
         fpC.enabled = false;
         fpCI.enabled = false;
         reticle.enabled = false;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    void Update()
+    {
+        if(ui.IsSolved())
+        {
+            ui.gameObject.SetActive(false);
+            pm.enabled = true;
+            fpC.enabled = true;
+            fpCI.enabled = true;
+            reticle.enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+
+            // Open door
+            this.enabled = false;
+        }
     }
 }
