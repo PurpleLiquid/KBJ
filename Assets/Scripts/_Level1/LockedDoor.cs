@@ -10,6 +10,7 @@ public class LockedDoor : Interactable
     [SerializeField] Camera fpCam;
     [SerializeField] Image reticle;
     [SerializeField] LockUI ui;
+    [SerializeField] Animator doorAnimator;
 
     private PlayerMovement pm;
     private FPCamera fpC;
@@ -45,7 +46,7 @@ public class LockedDoor : Interactable
             reticle.enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
 
-            // Open door
+            doorAnimator.SetTrigger("DoorOpen");
             this.enabled = false;
         }
     }

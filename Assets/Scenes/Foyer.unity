@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 330557461}
   - component: {fileID: 330557460}
   - component: {fileID: 330557464}
+  - component: {fileID: 330557465}
   m_Layer: 0
   m_Name: DoorLol
   m_TagString: Untagged
@@ -491,6 +492,26 @@ MonoBehaviour:
   fpCam: {fileID: 1710868010893978353}
   reticle: {fileID: 561893467}
   ui: {fileID: 967084350}
+  doorAnimator: {fileID: 330557465}
+--- !u!95 &330557465
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330557459}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ab732a10a1f7964c95aed5808cb03b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &381385343
 GameObject:
   m_ObjectHideFlags: 0
