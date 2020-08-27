@@ -35,16 +35,21 @@ public class LockedDoor : Interactable
         Cursor.lockState = CursorLockMode.None;
     }
 
+    public void Release()
+    {
+        ui.gameObject.SetActive(false);
+        pm.enabled = true;
+        fpC.enabled = true;
+        fpCI.enabled = true;
+        reticle.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Update()
     {
         if(ui.IsSolved())
         {
-            ui.gameObject.SetActive(false);
-            pm.enabled = true;
-            fpC.enabled = true;
-            fpCI.enabled = true;
-            reticle.enabled = true;
-            Cursor.lockState = CursorLockMode.Locked;
+            Release();
 
             doorAnimator.SetTrigger("DoorOpen");
             this.enabled = false;

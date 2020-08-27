@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LockUI : MonoBehaviour
 {
-    private List<LockSlot> lockSlots = new List<LockSlot>();
+    [SerializeField] List<LockSlot> lockSlots = new List<LockSlot>();
     [SerializeField] List<int> lockComboNumbers;
     private int index = 0;
     private bool solved = false;
@@ -17,16 +17,14 @@ public class LockUI : MonoBehaviour
 
     private void Awake()
     {
-        foreach (Transform child in transform)
+        for (int i = 0; i < lockSlots.Count; i++)
         {
-            LockSlot slot = child.GetComponent<LockSlot>();
+            LockSlot slot = lockSlots[i].GetComponent<LockSlot>();
 
             if (slot.GetComponent<Outline>() != null)
             {
                 slot.GetComponent<Outline>().enabled = false;
             }
-
-            lockSlots.Add(slot);
         }
 
         lockSlots[index].GetComponent<Outline>().enabled = true;
