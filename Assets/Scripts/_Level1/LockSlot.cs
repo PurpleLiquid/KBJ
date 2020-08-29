@@ -12,7 +12,7 @@ public class LockSlot : MonoBehaviour
 
     private void Start()
     {
-        Image image = transform.GetChild(0).GetComponent<Image>();
+        Image image = transform.GetComponent<Image>();
         image.sprite = lockSymbols[index];
     }
 
@@ -27,7 +27,7 @@ public class LockSlot : MonoBehaviour
             index--;
         }
 
-        Image image = transform.GetChild(0).GetComponent<Image>();
+        Image image = transform.GetComponent<Image>();
         image.sprite = lockSymbols[index];
     }
 
@@ -42,7 +42,7 @@ public class LockSlot : MonoBehaviour
             index++;
         }
 
-        Image image = transform.GetChild(0).GetComponent<Image>();
+        Image image = transform.GetComponent<Image>();
         image.sprite = lockSymbols[index];
     }
 

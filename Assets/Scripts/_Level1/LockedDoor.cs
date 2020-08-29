@@ -51,7 +51,7 @@ public class LockedDoor : Interactable
         {
             Release();
 
-            doorAnimator.SetTrigger("DoorOpen");
+            doorAnimator.SetTrigger("Open");
             this.enabled = false;
         }
     }
