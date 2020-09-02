@@ -931,45 +931,6 @@ MonoBehaviour:
   reticle: {fileID: 930397170}
   ui: {fileID: 1658461064}
   doorAnimator: {fileID: 776524205}
---- !u!1 &820813590 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 580264334043863643, guid: 3c11936cc6bb5594aa933e42563686a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8926780154369260324}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &820813591
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820813590}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 4edc856e50bcaa143aea933668be2971, type: 3}
-  m_Controller: {fileID: 9100000, guid: d5d30562fa129a34eb08f93786d113e2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &820813592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820813590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0daec8d2382fb747b33fd7fc412cf4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1810310020}
-  visionRange: 10
 --- !u!1 &839679797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,6 +2136,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 820813592, guid: 3c11936cc6bb5594aa933e42563686a4, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1810310020}
     - target: {fileID: 580264334043863643, guid: 3c11936cc6bb5594aa933e42563686a4,
         type: 3}
       propertyPath: m_Name
