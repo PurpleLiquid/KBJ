@@ -1,18 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+// When using unity editor ifs
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class Goal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void End()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        #if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 }

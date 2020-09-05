@@ -7,6 +7,7 @@ public class Lever : Interactable
     public override void Interact()
     {
         activated = !activated;
+        print(gameObject.name + " is " + activated);
     }
 
     public bool IsActivated()
