@@ -1,14 +1,26 @@
 fileFormatVersion: 2
-guid: 054c1560540f11644819a933f98c0f6a
+guid: 61a180e2208d4ea499d6c703f7c10712
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: 9067965912338001879
-    second: Cube.032|ArmatureAction
+      74: 3411670019733858986
+    second: Cube.032|Cube.032Action.001
   - first:
-      74: 4781951162920444690
-    second: Armature|ArmatureAction
+      74: -5554231539789630229
+    second: Cube.032|Door idle
+  - first:
+      74: 1614250545613371490
+    second: Cube.032|Door open
+  - first:
+      74: -2449649465525819314
+    second: Armature|Cube.032Action.001
+  - first:
+      74: 2662149863729848234
+    second: Armature|Door idle
+  - first:
+      74: -6305337838555079089
+    second: Armature|Door open
   externalObjects: {}
   materials:
     materialImportMode: 1

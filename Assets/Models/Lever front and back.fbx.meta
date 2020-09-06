@@ -1,11 +1,14 @@
 fileFormatVersion: 2
-guid: a24655c45d4e10a4ba66ca2897277a4a
+guid: abee0e7e4487df74086eae6ea23db27a
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: 4781951162920444690
-    second: Armature|ArmatureAction
+      74: -6456376578887271274
+    second: Armature|lever  push
+  - first:
+      74: -5611442561004300102
+    second: Armature|Lever pull
   externalObjects: {}
   materials:
     materialImportMode: 1
