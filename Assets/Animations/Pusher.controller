@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -107672146977828972, guid: 4edc856e50bcaa143aea933668be2971,
+  m_Motion: {fileID: 1348166118522791470, guid: 227542646812bd5448affbbfdec27cc1,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -74,7 +74,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 8643588234038878946, guid: 4edc856e50bcaa143aea933668be2971,
+  m_Motion: {fileID: 8643588234038878946, guid: 227542646812bd5448affbbfdec27cc1,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -201,13 +201,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Idle
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -250,7 +250,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pusher cannot go through door
+  m_Name: Pusher lost
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -264,7 +264,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -5807588422317740799, guid: 4edc856e50bcaa143aea933668be2971,
+  m_Motion: {fileID: 3192951654413918507, guid: 227542646812bd5448affbbfdec27cc1,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -292,7 +292,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 2267139205072634210, guid: 4edc856e50bcaa143aea933668be2971,
+  m_Motion: {fileID: 2267139205072634210, guid: 227542646812bd5448affbbfdec27cc1,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -320,7 +320,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1596546406764575466, guid: 4edc856e50bcaa143aea933668be2971,
+  m_Motion: {fileID: 1596546406764575466, guid: 227542646812bd5448affbbfdec27cc1,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 

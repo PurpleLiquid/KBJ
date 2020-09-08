@@ -11,16 +11,14 @@ public class Pusher : MonoBehaviour
     private float distanceToTarget = Mathf.Infinity;
     private Vector3 originPos;
     private Vector3 targetBeforeChargePos;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         originPos = transform.position;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
@@ -58,7 +56,7 @@ public class Pusher : MonoBehaviour
             }
         }
     }
-
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
