@@ -4,10 +4,23 @@ public class Lever : Interactable
 {
     [SerializeField] bool activated = false;
 
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+
+        if(activated)
+        {
+            animator.SetBool("Pushed", activated);
+        }
+    }
+
     public override void Interact()
     {
         activated = !activated;
-        print(gameObject.name + " is " + activated);
+        animator.SetBool("Pushed", activated);
+        print(activated);
     }
 
     public bool IsActivated()
