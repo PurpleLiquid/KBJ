@@ -16,12 +16,16 @@ public class LockedDoor : Interactable
     private FPCamera fpC;
     private FPCameraInteract fpCI;
 
+    private BoxCollider collider;
+
     void Start()
     {
         ui.gameObject.SetActive(false);
         pm = player.GetComponent<PlayerMovement>();
         fpC = fpCam.GetComponent<FPCamera>();
         fpCI = fpCam.GetComponent<FPCameraInteract>();
+
+        collider = gameObject.GetComponent<BoxCollider>();
     }
 
     public override void Interact()
@@ -52,6 +56,7 @@ public class LockedDoor : Interactable
             Release();
 
             doorAnimator.SetTrigger("Open");
+            collider.enabled = false;
             this.enabled = false;
         }
     }
