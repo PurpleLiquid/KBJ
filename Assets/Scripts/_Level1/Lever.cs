@@ -20,7 +20,6 @@ public class Lever : Interactable
     {
         activated = !activated;
         animator.SetBool("Pushed", activated);
-        print(activated);
     }
 
     public bool IsActivated()

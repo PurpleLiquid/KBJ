@@ -11,13 +11,10 @@ public class LeverSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Solve())
-        {
-            goal.End();
-        }
+        goal.setLock(Unlock());
     }
 
-    private bool Solve()
+    private bool Unlock()
     {
         for(int i = 0; i < levers.Count; i++)
         {
