@@ -38,6 +38,7 @@ public class Pusher : MonoBehaviour
 
     public void ReturnToOrigin()
     {
+        navMeshAgent.isStopped = false;
         navMeshAgent.SetDestination(originPos);
 
         if(transform.position.z == originPos.z)
@@ -48,12 +49,10 @@ public class Pusher : MonoBehaviour
 
     public void CheckVisionAfterCharge()
     {
-        if (targetBeforeChargePos.z == transform.position.z)
+        if ((distanceToTarget <= visionRange) == false)
         {
-            if ((distanceToTarget <= visionRange) == false)
-            {
-                animator.SetBool("InRange", false);
-            }
+            navMeshAgent.SetDestination(transform.position);
+            animator.SetBool("InRange", false);
         }
     }
     
