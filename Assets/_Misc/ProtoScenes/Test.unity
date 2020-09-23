@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7c9e08200a04143b5a96e4502ba788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: 0
 --- !u!65 &86969683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2297,11 +2298,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1810310020}
-    - target: {fileID: 1487219703549131245, guid: 381f34d0973aae54799efea8ee5e5a99,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4774808070225929111, guid: 381f34d0973aae54799efea8ee5e5a99,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2361,21 +2357,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pusher
-      objectReference: {fileID: 0}
-    - target: {fileID: 8903199737697422920, guid: 381f34d0973aae54799efea8ee5e5a99,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8903199737697422920, guid: 381f34d0973aae54799efea8ee5e5a99,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8903199737697422920, guid: 381f34d0973aae54799efea8ee5e5a99,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381f34d0973aae54799efea8ee5e5a99, type: 3}
