@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 193742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.94586, y: 0.94586, z: 0.94586}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -171,7 +171,7 @@ Material:
     - _SquashAmount: 1
     - _TranslucencyViewDependency: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.6839622, b: 0.6839622, a: 1}
     - _TranslucencyColor: {r: 1, g: 0.8493177, b: 0.07075471, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 107
-  materialHash: 45d585d68724b9612327374db9a06380215482368
+  materialHash: 3aafdcc3bdca1a6dec9498e1f3beea6d215482368
   root:
     _uniqueID: 1
     seed: 1234
