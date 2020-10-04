@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // This script should attach to a door
-public class LockedDoor : Interactable
+public class ConsoleInteract : Interactable
 {
     [SerializeField] Transform player;
     [SerializeField] Camera fpCam;

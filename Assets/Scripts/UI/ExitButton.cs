@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ExitButton : MonoBehaviour
 {
-    [SerializeField] LockedDoor door;
+    [SerializeField] ConsoleInteract loackedDoorController;
 
     public void ExitLock()
     {
-        door.Release();
+        loackedDoorController.Release();
     }
 }
