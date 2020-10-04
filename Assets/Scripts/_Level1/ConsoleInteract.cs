@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class ConsoleInteract : Interactable
 {
     [SerializeField] Transform player;
+    [SerializeField] Transform door;
     [SerializeField] Camera fpCam;
     [SerializeField] Image reticle;
     [SerializeField] LockUI ui;
-    [SerializeField] Animator doorAnimator;
 
     private PlayerMovement pm;
     private FPCamera fpC;
@@ -25,7 +25,7 @@ public class ConsoleInteract : Interactable
         fpC = fpCam.GetComponent<FPCamera>();
         fpCI = fpCam.GetComponent<FPCameraInteract>();
 
-        collider = gameObject.GetComponent<BoxCollider>();
+        collider = door.GetComponent<BoxCollider>();
     }
 
     public override void Interact()
@@ -55,7 +55,7 @@ public class ConsoleInteract : Interactable
         {
             Release();
 
-            doorAnimator.SetTrigger("Open");
+            door.GetComponent<Animator>().SetTrigger("Open");
             collider.enabled = false;
             this.enabled = false;
         }
