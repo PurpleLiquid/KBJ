@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ConsoleInteract : Interactable
+public class BrokenConsole : Interactable
 {
     [SerializeField] Transform player;
-    [SerializeField] Transform door;
     [SerializeField] Camera fpCam;
     [SerializeField] Image reticle;
-    [SerializeField] LockUI ui;
+    [SerializeField] Image ui;
 
     private PlayerMovement pm;
     private FPCamera fpC;
     private FPCameraInteract fpCI;
-
-    private BoxCollider collider;
 
     void Start()
     {
@@ -23,8 +20,6 @@ public class ConsoleInteract : Interactable
         pm = player.GetComponent<PlayerMovement>();
         fpC = fpCam.GetComponent<FPCamera>();
         fpCI = fpCam.GetComponent<FPCameraInteract>();
-
-        collider = door.GetComponent<BoxCollider>();
     }
 
     public override void Interact()
@@ -50,15 +45,6 @@ public class ConsoleInteract : Interactable
 
     void Update()
     {
-        if(ui.IsSolved())
-        {
-            Release();
-
-            door.GetComponent<Animator>().SetTrigger("Open");
-            collider.enabled = false;
-            this.enabled = false;
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Release();
