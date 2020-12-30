@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +9,7 @@ public class ConsoleInteract : Interactable
     [SerializeField] Camera fpCam;
     [SerializeField] Image reticle;
     [SerializeField] LockUI ui;
+    [SerializeField] LevelChanger fadeUI;
 
     private PlayerMovement pm;
     private FPCamera fpC;
@@ -48,15 +48,37 @@ public class ConsoleInteract : Interactable
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    IEnumerator WaitRelease()
+    {
+        ui.GetComponent<LockUI>().enabled = false;
+
+        yield return new WaitForSeconds(5);
+
+        ui.gameObject.SetActive(false);
+        pm.enabled = true;
+        fpC.enabled = true;
+        fpCI.enabled = true;
+        reticle.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        door.GetComponent<Animator>().SetTrigger("Open");
+        collider.enabled = false;
+        this.enabled = false;
+
+        yield return new WaitForSeconds(3);
+
+        fadeUI.FloorOneNext();
+        fadeUI.Fade();
+
+        yield return new WaitForSeconds(3);
+        fadeUI.PlayNextScene();
+    }
+
     void Update()
     {
         if(ui.IsSolved())
         {
-            Release();
-
-            door.GetComponent<Animator>().SetTrigger("Open");
-            collider.enabled = false;
-            this.enabled = false;
+            StartCoroutine(WaitRelease());
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
