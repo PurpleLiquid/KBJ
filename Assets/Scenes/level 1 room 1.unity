@@ -7050,6 +7050,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 328579641}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &328579643 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1524278447, guid: 4d6498a6d634ff041a0f6819224348b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 328579641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630b27a7666db224e8ac4d69e74e231f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &332773642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28644,6 +28656,7 @@ MonoBehaviour:
   fpCam: {fileID: 533103634999292169}
   reticle: {fileID: 616260575}
   ui: {fileID: 573977525}
+  fadeUI: {fileID: 328579643}
 --- !u!1001 &1463887375
 PrefabInstance:
   m_ObjectHideFlags: 0

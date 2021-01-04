@@ -31,7 +31,7 @@ public class LevelChanger : MonoBehaviour
     // ================  Title Screen  ========================
     public void Play()
     {
-        nextScene = "Foyer";
+        nextScene = "Level 1 Room 1";
     }
 
     public void Tutorial()
@@ -46,5 +46,11 @@ public class LevelChanger : MonoBehaviour
         #else
             Application.Quit();
         #endif
+    }
+
+    // ================  Floor 1 Room 1  ========================
+    public void FloorOneNext()
+    {
+        nextScene = "Level 1 Room 2";
     }
 }
