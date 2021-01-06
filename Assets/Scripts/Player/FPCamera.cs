@@ -6,8 +6,7 @@ public class FPCamera : MonoBehaviour
     [SerializeField] Transform target;
 
     private float clampRotation = 0f;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         //lock cursor to screen center
@@ -17,8 +16,7 @@ public class FPCamera : MonoBehaviour
         transform.position = target.position;
 
     }
-
-    // Update is called once per frame
+    
     void LateUpdate()
     {
         firstPerson();

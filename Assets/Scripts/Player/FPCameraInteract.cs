@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FPCameraInteract : MonoBehaviour
 {
@@ -23,7 +21,7 @@ public class FPCameraInteract : MonoBehaviour
         {
             Interactable interactable = hit.transform.GetComponent<Interactable>();
 
-            if(interactable != null)
+            if(interactable != null && interactable.enabled == true)
             {
                 interactable.Interact();
             }
