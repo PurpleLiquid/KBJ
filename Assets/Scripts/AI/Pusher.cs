@@ -17,6 +17,7 @@ public class Pusher : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         originPos = transform.position;
+        navMeshAgent.isStopped = true;
     }
     
     void Update()
@@ -25,6 +26,7 @@ public class Pusher : MonoBehaviour
 
         if (distanceToTarget <= visionRange)
         {
+            navMeshAgent.isStopped = false;
             animator.SetBool("InRange", true);
             animator.SetBool("Idle", false);
             targetBeforeChargePos = target.position;
@@ -41,9 +43,10 @@ public class Pusher : MonoBehaviour
         navMeshAgent.isStopped = false;
         navMeshAgent.SetDestination(originPos);
 
-        if(transform.position.z == originPos.z)
+        if((transform.position.z - 0.1) <= originPos.z)
         {
             animator.SetBool("Idle", true);
+            navMeshAgent.isStopped = true;
         }
     }
 
