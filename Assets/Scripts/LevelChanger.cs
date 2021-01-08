@@ -16,7 +16,7 @@ public class LevelChanger : MonoBehaviour
 {
     [SerializeField] Animator animator;
 
-    private string nextScene = "";
+    private string nextSceneName = "";
 
     public void Fade()
     {
@@ -25,18 +25,23 @@ public class LevelChanger : MonoBehaviour
 
     public void PlayNextScene()
     {
-        SceneManager.LoadScene(nextScene);
+        SceneManager.LoadScene(nextSceneName);
+    }
+
+    public void setNextScene(string sceneName)
+    {
+        nextSceneName = sceneName;
     }
 
     // ================  Title Screen  ========================
     public void Play()
     {
-        nextScene = "Level 1 Room 1";
+        nextSceneName = "Level 1 Room 1";
     }
 
     public void Tutorial()
     {
-        nextScene = "Tutorial";
+        nextSceneName = "Tutorial";
     }
 
     public void Exit()
@@ -46,11 +51,5 @@ public class LevelChanger : MonoBehaviour
         #else
             Application.Quit();
         #endif
-    }
-
-    // ================  Floor 1 Room 1  ========================
-    public void FloorOneNext()
-    {
-        nextScene = "Level 1 Room 2";
     }
 }

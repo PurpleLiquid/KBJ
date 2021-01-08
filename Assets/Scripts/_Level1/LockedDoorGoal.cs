@@ -5,6 +5,7 @@ public class LockedDoorGoal : Interactable
 {
     [SerializeField] bool locked = true;
     [SerializeField] LevelChanger fadeUI;
+    [SerializeField] string nextSceneName = "";
 
     public void setLocked(bool isLocked)
     {
@@ -23,7 +24,7 @@ public class LockedDoorGoal : Interactable
     private IEnumerator nextLevelDelay()
     {
         yield return new WaitForSeconds(2);
-        fadeUI.FloorOneNext();
+        fadeUI.setNextScene(nextSceneName);
         fadeUI.Fade();
 
         yield return new WaitForSeconds(2);
