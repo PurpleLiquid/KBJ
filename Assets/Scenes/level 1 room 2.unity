@@ -8570,6 +8570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f2dd7bf77db6a478e90ebf5812c810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactTooltipText: Interact
   scriptureCanvas: {fileID: 2087087087}
   playerController: {fileID: 197382349}
 --- !u!65 &218099843
@@ -40635,7 +40636,7 @@ PrefabInstance:
     - target: {fileID: 533103633036221915, guid: 984a5f608a797c54ea005d3131c39a40,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 60.21
+      value: 10.995
       objectReference: {fileID: 0}
     - target: {fileID: 533103633036221915, guid: 984a5f608a797c54ea005d3131c39a40,
         type: 3}
@@ -40645,7 +40646,7 @@ PrefabInstance:
     - target: {fileID: 533103633036221915, guid: 984a5f608a797c54ea005d3131c39a40,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4822396
+      value: 0.153
       objectReference: {fileID: 0}
     - target: {fileID: 533103633036221915, guid: 984a5f608a797c54ea005d3131c39a40,
         type: 3}

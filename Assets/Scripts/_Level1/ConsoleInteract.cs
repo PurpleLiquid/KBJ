@@ -46,7 +46,7 @@ public class ConsoleInteract : Interactable
             StartCoroutine(unlockGoal());
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(ControlConstants.LEAVE_INTERACTION))
         {
             Release();
         }

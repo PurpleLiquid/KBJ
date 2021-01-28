@@ -13,7 +13,11 @@ public class LockSlot : MonoBehaviour
     private void Start()
     {
         Image image = transform.GetComponent<Image>();
-        image.sprite = lockSymbols[index];
+
+        if(lockSymbols.Count > 0)
+        {
+            image.sprite = lockSymbols[index];
+        }
     }
 
     public void SwitchUpperSymbol()

@@ -12,17 +12,15 @@ public class DialogueManager : MonoBehaviour
     // The white box thingy
     [SerializeField] Image dialogueBox;
 
-    void Start()
-    {
-        dialogueBox.transform.gameObject.SetActive(false);
-    }
+    [SerializeField] PlayerStateController playerState;
 
     public void StartDialogue(Dialogue dialogue)
     {
+        playerState.setPlayerFree(false);
         sentences.Clear();
 
         nameText.text = dialogue.name;
-        dialogueBox.transform.gameObject.SetActive(true);
+        dialogueBox.gameObject.SetActive(true);
 
         foreach(string sentence in dialogue.sentences)
         {
@@ -38,6 +36,7 @@ public class DialogueManager : MonoBehaviour
         if(sentences.Count == 0)
         {
             EndDialogue();
+            return;
         }
 
         string sentence = sentences.Dequeue();
@@ -46,6 +45,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
-        dialogueBox.transform.gameObject.SetActive(false);
+        dialogueBox.gameObject.SetActive(false);
+        playerState.setPlayerFree(true);
     }
 }

@@ -34,10 +34,10 @@ RectTransform:
   m_Father: {fileID: 6077740786116424645}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -92.600006, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.24940759, y: 0.5}
+  m_AnchorMax: {x: 0.24940759, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.22033}
+  m_SizeDelta: {x: 476, y: 278}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6077740785359769451
 CanvasRenderer:
@@ -90,10 +90,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockSymbols:
   - {fileID: 21300000, guid: bd9896a2839a16c4d90ad8d09c65e9db, type: 3}
-  - {fileID: 21300000, guid: ae48f6394269d8044a8442aaf1eb991f, type: 3}
+  - {fileID: 21300000, guid: 6c025f6dea0c464428f6bd939a532382, type: 3}
   - {fileID: 21300000, guid: 79fd1536d74f03a4d9824eb4912d1a4d, type: 3}
-  - {fileID: 21300000, guid: 50360508c71594944b65942c5384278e, type: 3}
-  - {fileID: 21300000, guid: 47014c65c172ee0419937d9318464b85, type: 3}
+  - {fileID: 21300000, guid: 890ddbae0748e1e49acbaa7d91280f38, type: 3}
 --- !u!114 &6077740785359769446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,10 +142,10 @@ RectTransform:
   m_Father: {fileID: 6077740786116424645}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.1590004, y: 0.22033}
+  m_SizeDelta: {x: 476, y: 278}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6077740785661930422
 CanvasRenderer:
@@ -198,11 +197,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockSymbols:
+  - {fileID: 21300000, guid: 6c025f6dea0c464428f6bd939a532382, type: 3}
+  - {fileID: 21300000, guid: 890ddbae0748e1e49acbaa7d91280f38, type: 3}
   - {fileID: 21300000, guid: bd9896a2839a16c4d90ad8d09c65e9db, type: 3}
-  - {fileID: 21300000, guid: ae48f6394269d8044a8442aaf1eb991f, type: 3}
   - {fileID: 21300000, guid: 79fd1536d74f03a4d9824eb4912d1a4d, type: 3}
-  - {fileID: 21300000, guid: 50360508c71594944b65942c5384278e, type: 3}
-  - {fileID: 21300000, guid: 47014c65c172ee0419937d9318464b85, type: 3}
 --- !u!114 &6077740785661930421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,10 +252,10 @@ RectTransform:
   m_Father: {fileID: 6077740786693739627}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -143.2384, y: 35.55931}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000012189, y: 0}
+  m_SizeDelta: {x: 475.7616, y: 277.55933}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6077740786116424646
 CanvasRenderer:
@@ -312,7 +310,7 @@ MonoBehaviour:
   - {fileID: 6077740785359769449}
   - {fileID: 6077740785661930420}
   - {fileID: 6077740787398355348}
-  lockComboNumbers: 000000000100000002000000
+  lockComboNumbers: 010000000300000003000000
 --- !u!1 &6077740786693739623
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,10 +444,10 @@ RectTransform:
   m_Father: {fileID: 6077740786116424645}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 88.3, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.76122284, y: 0.5}
+  m_AnchorMax: {x: 0.76122284, y: 0.5}
+  m_AnchoredPosition: {x: -4, y: 0.22034}
+  m_SizeDelta: {x: 475, y: 278}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6077740787398355350
 CanvasRenderer:
@@ -501,11 +499,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockSymbols:
-  - {fileID: 21300000, guid: bd9896a2839a16c4d90ad8d09c65e9db, type: 3}
-  - {fileID: 21300000, guid: ae48f6394269d8044a8442aaf1eb991f, type: 3}
+  - {fileID: 21300000, guid: 890ddbae0748e1e49acbaa7d91280f38, type: 3}
+  - {fileID: 21300000, guid: 6c025f6dea0c464428f6bd939a532382, type: 3}
   - {fileID: 21300000, guid: 79fd1536d74f03a4d9824eb4912d1a4d, type: 3}
-  - {fileID: 21300000, guid: 50360508c71594944b65942c5384278e, type: 3}
-  - {fileID: 21300000, guid: 47014c65c172ee0419937d9318464b85, type: 3}
+  - {fileID: 21300000, guid: bd9896a2839a16c4d90ad8d09c65e9db, type: 3}
 --- !u!114 &6077740787398355349
 MonoBehaviour:
   m_ObjectHideFlags: 0

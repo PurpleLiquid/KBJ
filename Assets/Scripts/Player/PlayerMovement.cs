@@ -21,14 +21,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void processMovement()
     {
-        if (Input.GetButton("Horizontal")) // left and right movement
+        if (Input.GetButton(ControlConstants.FORWARD_OR_BACKWARD_MOVEMENT)) // left and right movement
         {
-            transform.position += Input.GetAxis("Horizontal") * transform.right * Time.deltaTime * moveSpeed;
+            transform.position += Input.GetAxis(ControlConstants.FORWARD_OR_BACKWARD_MOVEMENT) 
+                                  * transform.right 
+                                  * Time.deltaTime 
+                                  * moveSpeed;
         }
 
-        if (Input.GetButton("Vertical")) // Forward and back movement
+        if (Input.GetButton(ControlConstants.LEFT_OR_RIGHT_MOVEMENT)) // Forward and back movement
         {
-            transform.position += Input.GetAxis("Vertical") * transform.forward * Time.deltaTime * moveSpeed;
+            transform.position += Input.GetAxis(ControlConstants.LEFT_OR_RIGHT_MOVEMENT) 
+                                  * transform.forward 
+                                  * Time.deltaTime 
+                                  * moveSpeed;
         }
 
     }

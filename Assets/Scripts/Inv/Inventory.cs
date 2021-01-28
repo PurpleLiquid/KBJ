@@ -41,12 +41,12 @@ public class Inventory : MonoBehaviour
     private void Update()
     {
         // Inputs
-        if (Input.GetKeyDown(KeyCode.Q) & accessed == false)
+        if (Input.GetKeyDown(ControlConstants.INVENTORY) & accessed == false)
         {
             ui.transform.gameObject.SetActive(true);
             accessed = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Q) & accessed == true)
+        else if (Input.GetKeyDown(ControlConstants.INVENTORY) & accessed == true)
         {
             ui.transform.gameObject.SetActive(false);
             accessed = false;

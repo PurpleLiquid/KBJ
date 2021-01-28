@@ -1,51 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class BrokenConsole : Interactable
 {
-    [SerializeField] Transform player;
-    [SerializeField] Camera fpCam;
-    [SerializeField] Image reticle;
     [SerializeField] Image ui;
-
-    private PlayerMovement pm;
-    private FPCamera fpC;
-    private FPCameraInteract fpCI;
+    [SerializeField] PlayerStateController playerState;
 
     void Start()
     {
         ui.gameObject.SetActive(false);
-        pm = player.GetComponent<PlayerMovement>();
-        fpC = fpCam.GetComponent<FPCamera>();
-        fpCI = fpCam.GetComponent<FPCameraInteract>();
     }
 
     public override void Interact()
     {
-        // Disable player ,free cursor, and start activate lock script
         ui.gameObject.SetActive(true);
-        pm.enabled = false;
-        fpC.enabled = false;
-        fpCI.enabled = false;
-        reticle.enabled = false;
-        Cursor.lockState = CursorLockMode.None;
+        playerState.setPlayerFree(false);
     }
 
     public void Release()
     {
         ui.gameObject.SetActive(false);
-        pm.enabled = true;
-        fpC.enabled = true;
-        fpCI.enabled = true;
-        reticle.enabled = true;
-        Cursor.lockState = CursorLockMode.Locked;
+        playerState.setPlayerFree(true);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(ControlConstants.LEAVE_INTERACTION))
         {
             Release();
         }

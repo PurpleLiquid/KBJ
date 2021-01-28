@@ -13,7 +13,7 @@ public class Scripture : Interactable
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(ControlConstants.LEAVE_INTERACTION))
         {
             scriptureCanvas.gameObject.SetActive(false);
             playerController.setPlayerFree(true);

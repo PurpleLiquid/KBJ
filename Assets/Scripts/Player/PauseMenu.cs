@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         //pause and show pause menu UI
-        if (Input.GetKeyDown(KeyCode.P) & paused == false)
+        if (Input.GetKeyDown(ControlConstants.PAUSE) & paused == false)
         {
             Time.timeScale = 0f;
             pauseMenuUI.SetActive(true);
@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
         }
 
         //unpause and hid pause menu UI
-        else if (Input.GetKeyDown(KeyCode.P) & paused == true)
+        else if (Input.GetKeyDown(ControlConstants.PAUSE) & paused == true)
         {
             Time.timeScale = 1f;
             pauseMenuUI.SetActive(false);
