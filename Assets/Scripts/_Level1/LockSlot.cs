@@ -20,7 +20,22 @@ public class LockSlot : MonoBehaviour
         }
     }
 
-    public void SwitchUpperSymbol()
+    private void Update()
+    {
+        if(gameObject.GetComponent<Outline>().enabled == true)
+        {
+            if (Input.GetAxis("Mouse ScrollWheel") < 0f) // Scroll down
+            {
+                SwitchBelowSymbol();
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") > 0f) // Scroll up
+            {
+                SwitchUpperSymbol();
+            }
+        }
+    }
+
+    private void SwitchUpperSymbol()
     {
         if(index == 0)
         {
@@ -35,7 +50,7 @@ public class LockSlot : MonoBehaviour
         image.sprite = lockSymbols[index];
     }
 
-    public void SwitchBelowSymbol()
+    private void SwitchBelowSymbol()
     {
         if (index == (lockSymbols.Count - 1))
         {
@@ -48,6 +63,11 @@ public class LockSlot : MonoBehaviour
 
         Image image = transform.GetComponent<Image>();
         image.sprite = lockSymbols[index];
+    }
+
+    public void SetAsSelected()
+    {
+        gameObject.GetComponent<Outline>().enabled = true;
     }
 
     public int GetIndex()

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,59 +31,23 @@ public class LockUI : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            SwitchLockLeft();
-        }
-        else if(Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            SwitchLockRight();
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            lockSlots[index].GetComponent<LockSlot>().SwitchBelowSymbol();
-        }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            lockSlots[index].GetComponent<LockSlot>().SwitchUpperSymbol();
-        }
-
         if (SolveLock())
         {
             solved = true;
         }
     }
 
-    private void SwitchLockLeft()
+    public void ResetLockSelection()
     {
-        lockSlots[index].GetComponent<Outline>().enabled = false;
-
-        if(index == 0)
+        for (int i = 0; i < lockSlots.Count; i++)
         {
-            index = (lockSlots.Count - 1);
-        }
-        else
-        {
-            index--;
-        }
+            LockSlot slot = lockSlots[i].GetComponent<LockSlot>();
 
-        lockSlots[index].GetComponent<Outline>().enabled = true;
-    }
-
-    private void SwitchLockRight()
-    {
-        lockSlots[index].GetComponent<Outline>().enabled = false;
-
-        if (index == (lockSlots.Count-1))
-        {
-            index = 0;
+            if (slot.GetComponent<Outline>() != null)
+            {
+                slot.GetComponent<Outline>().enabled = false;
+            }
         }
-        else
-        {
-            index++;
-        }
-
-        lockSlots[index].GetComponent<Outline>().enabled = true;
     }
 
     private List<int> GetCurrentLockConfig()
@@ -120,6 +83,15 @@ public class LockUI : MonoBehaviour
         }
 
         // lock is correct
+        DisableLocks();
         return true;
+    }
+
+    private void DisableLocks()
+    {
+        for (int i = 0; i < lockSlots.Count; i++)
+        {
+            lockSlots[i].GetComponent<LockSlot>().enabled = false;
+        }
     }
 }
