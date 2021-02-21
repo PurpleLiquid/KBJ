@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class BrokenConsole : Interactable
 {
-    [SerializeField] Image ui;
+    [SerializeField] ClosableUI ui;
     [SerializeField] PlayerStateController playerState;
 
     void Start()
@@ -13,21 +13,7 @@ public class BrokenConsole : Interactable
 
     public override void Interact()
     {
-        ui.gameObject.SetActive(true);
+        ui.ShowUI();
         playerState.setPlayerFree(false);
-    }
-
-    public void Release()
-    {
-        ui.gameObject.SetActive(false);
-        playerState.setPlayerFree(true);
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(ControlConstants.LEAVE_INTERACTION))
-        {
-            Release();
-        }
     }
 }

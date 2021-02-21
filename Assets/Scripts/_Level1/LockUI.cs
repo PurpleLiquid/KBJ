@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LockUI : MonoBehaviour
+public class LockUI : ClosableUI
 {
     [SerializeField] List<LockSlot> lockSlots = new List<LockSlot>();
     [SerializeField] List<int> lockComboNumbers;

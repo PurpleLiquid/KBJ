@@ -15,14 +15,8 @@ public class ConsoleInteract : Interactable
     public override void Interact()
     {
         // Show lock UI, freeze player
-        ui.gameObject.SetActive(true);
+        ui.ShowUI();
         playerState.setPlayerFree(false);
-    }
-
-    public void Release()
-    {
-        ui.gameObject.SetActive(false);
-        playerState.setPlayerFree(true);
     }
 
     private IEnumerator unlockGoal()
@@ -41,14 +35,9 @@ public class ConsoleInteract : Interactable
 
     void Update()
     {
-        if(ui.IsSolved())
+        if (ui.IsSolved())
         {
             StartCoroutine(unlockGoal());
-        }
-
-        if (Input.GetKeyDown(ControlConstants.LEAVE_INTERACTION))
-        {
-            Release();
         }
     }
 }
