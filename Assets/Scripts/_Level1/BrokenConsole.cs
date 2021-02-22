@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class BrokenConsole : Interactable
 {
-    [SerializeField] ClosableUI ui;
+    [SerializeField] ClosableUI brokenLockUI;
     [SerializeField] PlayerStateController playerState;
+
+    [SerializeField] UIController uiCont;
 
     void Start()
     {
-        ui.gameObject.SetActive(false);
+        brokenLockUI.gameObject.SetActive(false);
     }
 
     public override void Interact()
     {
-        ui.ShowUI();
-        playerState.setPlayerFree(false);
+        uiCont.Show(brokenLockUI);
     }
 }

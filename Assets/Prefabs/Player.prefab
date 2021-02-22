@@ -111,7 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf95365fa4a92c94c8c2592a79ff43e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 0.5
+  tooltip: {fileID: 0}
 --- !u!1 &533103633036221916
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +272,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 815dce223bfa64e4d8afd069b4d95ae4, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5b437a61f04fe3b4bb4d18e2560ff46d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5b437a61f04fe3b4bb4d18e2560ff46d,
         type: 3}
       propertyPath: m_Name

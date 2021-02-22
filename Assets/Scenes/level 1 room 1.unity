@@ -5675,8 +5675,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactTooltipText: Interact
-  ui: {fileID: 323333718}
+  brokenLockUI: {fileID: 323333718}
   playerState: {fileID: 1914486754}
+  uiCont: {fileID: 522506907}
 --- !u!1001 &260502386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30168,8 +30169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactTooltipText: Interact
   ui: {fileID: 214786444}
-  playerState: {fileID: 1914486754}
   lockedDoor: {fileID: 456724694}
+  uiCont: {fileID: 522506907}
 --- !u!1001 &1463887375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41147,7 +41148,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!1001 &1939286843
 PrefabInstance:
@@ -45546,10 +45547,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1156983952, guid: 984a5f608a797c54ea005d3131c39a40, type: 3}
-      propertyPath: range
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156983952, guid: 984a5f608a797c54ea005d3131c39a40, type: 3}
       propertyPath: tooltip
       value: 
       objectReference: {fileID: 1914486755}
@@ -45753,6 +45750,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 614642473}
     m_Modifications:
+    - target: {fileID: 67296038276805716, guid: ed819d864b204bd4f939c4f8d61a71f3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3628687932936755928, guid: ed819d864b204bd4f939c4f8d61a71f3,
         type: 3}
       propertyPath: m_RootOrder

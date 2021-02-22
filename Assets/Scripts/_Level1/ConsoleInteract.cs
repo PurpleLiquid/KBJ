@@ -4,8 +4,9 @@ using UnityEngine;
 public class ConsoleInteract : Interactable
 {
     [SerializeField] LockUI ui;
-    [SerializeField] PlayerStateController playerState;
     [SerializeField] LockedDoorGoal lockedDoor;
+
+    [SerializeField] UIController uiCont;
 
     void Start()
     {
@@ -15,8 +16,7 @@ public class ConsoleInteract : Interactable
     public override void Interact()
     {
         // Show lock UI, freeze player
-        ui.ShowUI();
-        playerState.setPlayerFree(false);
+        uiCont.Show(ui);
     }
 
     private IEnumerator unlockGoal()
@@ -27,8 +27,7 @@ public class ConsoleInteract : Interactable
 
         yield return new WaitForSeconds(3);
 
-        ui.gameObject.SetActive(false);
-        playerState.setPlayerFree(true);
+        uiCont.Release();
 
         this.enabled = false;
     }

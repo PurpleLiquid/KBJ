@@ -5,11 +5,11 @@ public class UIController : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] PlayerStateController playerState;
 
-    private ClosableUI[] UIs;
+    private ClosableUI activeUI;
 
     void Start()
     {
-        UIs = Object.FindObjectsOfType<ClosableUI>();
+        gameObject.SetActive(false);
     }
 
     void Update()
@@ -27,11 +27,16 @@ public class UIController : MonoBehaviour, IPointerDownHandler
 
     public void Release()
     {
-        foreach (ClosableUI UI in UIs)
-        {
-            UI.CloseUI();
-        }
-
+        activeUI.CloseUI();
         playerState.setPlayerFree(true);
+        gameObject.SetActive(false);
+    }
+
+    public void Show(ClosableUI ui)
+    {
+        activeUI = ui;
+        activeUI.ShowUI();
+        playerState.setPlayerFree(false);
+        gameObject.SetActive(true);
     }
 }
