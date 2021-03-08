@@ -10714,7 +10714,7 @@ PrefabInstance:
     - target: {fileID: 4333596728895642392, guid: 57d50d72652efdc459dbdf083bed3f97,
         type: 3}
       propertyPath: interactTooltipText
-      value: Open
+      value: Interact
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57d50d72652efdc459dbdf083bed3f97, type: 3}
