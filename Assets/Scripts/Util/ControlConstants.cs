@@ -10,7 +10,7 @@ public static class ControlConstants
     public static string LEFT_OR_RIGHT_MOVEMENT = "Vertical";
 
     // When exiting out of interactable puzzles and text
-    public static KeyCode LEAVE_INTERACTION = KeyCode.X;
+    public static KeyCode LEAVE_INTERACTION = KeyCode.Space;
 
     // Inventory
     public static KeyCode INVENTORY = KeyCode.I;
@@ -19,5 +19,5 @@ public static class ControlConstants
     public static KeyCode PAUSE = KeyCode.P;
 
     // Continue dialogue
-    public static KeyCode CONTINUE = KeyCode.Return;
+    public static KeyCode CONTINUE = KeyCode.Space;
 }

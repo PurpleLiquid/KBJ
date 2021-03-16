@@ -1,28 +1,17 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class Scripture : Interactable
 {
-    [SerializeField] Image scriptureCanvas;
-    [SerializeField] PlayerStateController playerController;
+    [SerializeField] ClosableUI ui;
+    [SerializeField] UIController uiCont;
 
-    void Start()
+    private void Start()
     {
-        scriptureCanvas.gameObject.SetActive(false);
-    }
-    
-    void Update()
-    {
-        if (Input.GetKeyDown(ControlConstants.LEAVE_INTERACTION))
-        {
-            scriptureCanvas.gameObject.SetActive(false);
-            playerController.setPlayerFree(true);
-        }
+        ui.CloseUI();
     }
 
     public override void Interact()
     {
-        scriptureCanvas.gameObject.SetActive(true);
-        playerController.setPlayerFree(false);
+        uiCont.Show(ui);
     }
 }

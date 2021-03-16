@@ -20,10 +20,12 @@ public class DialogueOne : MonoBehaviour
 
     void Update()
     {
-        // Right Enter key on windows
-        if (Input.GetKeyDown(ControlConstants.CONTINUE))
+        if (Input.GetKeyDown(ControlConstants.CONTINUE) || Input.GetMouseButtonDown(0))
         {
-            dm.DisplayNextSentence();
+            if (dm.DisplayNextSentence() == false)
+            {
+                this.enabled = false;
+            }
         }
     }
 }

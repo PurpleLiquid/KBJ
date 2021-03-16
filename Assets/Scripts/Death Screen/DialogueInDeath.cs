@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueInDeath : MonoBehaviour
 {
     [SerializeField] DialogueManagerOfTheDead dm;
     [SerializeField] DialogueTrigger trigger;
 
+    [SerializeField] Button restartButton;
+
     void Start()
     {
+        restartButton.gameObject.SetActive(false);
         StartCoroutine(LateStart());
     }
 
@@ -21,9 +25,12 @@ public class DialogueInDeath : MonoBehaviour
     void Update()
     {
         // Right Enter key on windows
-        if (Input.GetKeyDown(ControlConstants.CONTINUE))
+        if (Input.GetKeyDown(ControlConstants.CONTINUE) || Input.GetMouseButtonDown(0))
         {
-            dm.DisplayNextSentence();
+            if (dm.DisplayNextSentence() == false)
+            {
+                restartButton.gameObject.SetActive(true);
+            }
         }
     }
 }
