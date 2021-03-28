@@ -43,7 +43,10 @@ public class Pusher : MonoBehaviour
         navMeshAgent.isStopped = false;
         navMeshAgent.SetDestination(originPos);
 
-        if((transform.position.z - 0.1) <= originPos.z)
+        if(((transform.position.z - 0.1) <= originPos.z &&
+           (transform.position.z + 0.1) >= originPos.z) &&
+           ((transform.position.x - 0.1) <= originPos.x &&
+           (transform.position.x + 0.1) >= originPos.x))
         {
             animator.SetBool("Idle", true);
             navMeshAgent.isStopped = true;
