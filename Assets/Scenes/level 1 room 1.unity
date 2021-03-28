@@ -4504,7 +4504,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!1001 &244440683
 PrefabInstance:
@@ -36663,7 +36663,7 @@ MonoBehaviour:
     - Hello, and welcome
     - Here you will be tested by various trials and puzzles
     - Make it through them all and I will grant you your freedom
-    - I wish you luck!
+    - I wish you luck!!
 --- !u!114 &1787227540
 MonoBehaviour:
   m_ObjectHideFlags: 0

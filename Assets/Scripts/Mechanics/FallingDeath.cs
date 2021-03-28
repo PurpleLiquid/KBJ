@@ -5,9 +5,11 @@ public class FallingDeath : MonoBehaviour
 {
     private string deathScreen = "Dead End";
     [SerializeField] LevelChanger fadeUI;
+    [SerializeField] PlayerStateController player;
 
     private void OnTriggerEnter(Collider other)
     {
+        player.setPlayerFree(false);
         StartCoroutine(ShowDeathScreen());
     }
 
