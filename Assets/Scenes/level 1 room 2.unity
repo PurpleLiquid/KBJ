@@ -36124,6 +36124,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2063740126, guid: 984a5f608a797c54ea005d3131c39a40, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 533103633036221915, guid: 984a5f608a797c54ea005d3131c39a40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45615,13 +45619,13 @@ Transform:
   - {fileID: 582735350}
   - {fileID: 1360360451}
   - {fileID: 35783101}
-  - {fileID: 1412987449}
   - {fileID: 1736475464}
-  - {fileID: 846261154}
+  - {fileID: 1412987449}
   - {fileID: 1037059654}
   - {fileID: 1375100532}
   - {fileID: 1299988124}
   - {fileID: 37241770}
+  - {fileID: 846261154}
   - {fileID: 1345665643}
   - {fileID: 568926168}
   - {fileID: 382763328}
@@ -45642,9 +45646,9 @@ Transform:
   - {fileID: 1598994119}
   - {fileID: 705246348}
   - {fileID: 102916407}
+  - {fileID: 1301529590}
   - {fileID: 923441889}
   - {fileID: 1132959038}
-  - {fileID: 1301529590}
   - {fileID: 2038067062}
   - {fileID: 1973092190}
   m_Father: {fileID: 0}
