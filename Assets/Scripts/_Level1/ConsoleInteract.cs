@@ -6,7 +6,13 @@ public class ConsoleInteract : Interactable
     [SerializeField] LockUI ui;
     [SerializeField] LockedDoorGoal lockedDoor;
 
+    [SerializeField] string unlockSFXName;
+    [SerializeField] SFXManager sfx;
+
     [SerializeField] UIController uiCont;
+
+    // Stops duplication
+    private bool sfxPlayed = false;
 
     void Start()
     {
@@ -36,6 +42,12 @@ public class ConsoleInteract : Interactable
     {
         if (ui.IsSolved())
         {
+            if (sfxPlayed == false)
+            {
+                sfx.PlaySFX(unlockSFXName);
+                sfxPlayed = true;
+            }
+            
             StartCoroutine(unlockGoal());
         }
     }

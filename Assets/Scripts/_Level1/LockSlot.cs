@@ -7,12 +7,17 @@ public class LockSlot : MonoBehaviour
 {
     [SerializeField] List<Sprite> lockSymbols;
 
+    private SFXManager sfx;
+
     // The first symbol in the list will be the first shown symbol
     private int index = 0;
 
     private void Start()
     {
         Image image = transform.GetComponent<Image>();
+
+        GameObject scripts = GameObject.Find("Scripts");
+        sfx = scripts.GetComponent<SFXManager>();
 
         if(lockSymbols.Count > 0)
         {
@@ -48,6 +53,8 @@ public class LockSlot : MonoBehaviour
 
         Image image = transform.GetComponent<Image>();
         image.sprite = lockSymbols[index];
+
+        sfx.PlaySFX("Lock_Switch");
     }
 
     private void SwitchBelowSymbol()
@@ -63,6 +70,8 @@ public class LockSlot : MonoBehaviour
 
         Image image = transform.GetComponent<Image>();
         image.sprite = lockSymbols[index];
+
+        sfx.PlaySFX("Lock_Switch");
     }
 
     public void SetAsSelected()

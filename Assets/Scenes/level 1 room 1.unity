@@ -9968,6 +9968,16 @@ PrefabInstance:
       propertyPath: interactTooltipText
       value: Interact
       objectReference: {fileID: 0}
+    - target: {fileID: 4333596728895642392, guid: 57d50d72652efdc459dbdf083bed3f97,
+        type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 1914486757}
+    - target: {fileID: 4333596728895642392, guid: 57d50d72652efdc459dbdf083bed3f97,
+        type: 3}
+      propertyPath: openningDoorSFX
+      value: Door_Openning
+      objectReference: {fileID: 0}
     - target: {fileID: 7820210181345194654, guid: 57d50d72652efdc459dbdf083bed3f97,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12977,6 +12987,45 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 589957773}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &593963899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 593963900}
+  - component: {fileID: 593963901}
+  m_Layer: 0
+  m_Name: AudioListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &593963900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593963899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &593963901
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593963899}
+  m_Enabled: 1
 --- !u!1001 &594417276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30339,6 +30388,8 @@ MonoBehaviour:
   interactTooltipText: Interact
   ui: {fileID: 214786444}
   lockedDoor: {fileID: 456724694}
+  unlockSFXName: Unlock_Door
+  sfx: {fileID: 1914486757}
   uiCont: {fileID: 522506907}
 --- !u!1001 &1461509577
 PrefabInstance:
@@ -41352,6 +41403,7 @@ GameObject:
   - component: {fileID: 1914486754}
   - component: {fileID: 1914486756}
   - component: {fileID: 1914486755}
+  - component: {fileID: 1914486757}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -41417,6 +41469,25 @@ MonoBehaviour:
   dialogueText: {fileID: 449313033}
   dialogueBox: {fileID: 449313035}
   playerState: {fileID: 1914486754}
+--- !u!114 &1914486757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914486752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6fb24a825c4d649b754d244699f635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffects:
+  - name: Lock_Switch
+    audioClip: {fileID: 8300000, guid: 0b39d309b6e968b4897809545bb3c664, type: 3}
+  - name: Unlock_Door
+    audioClip: {fileID: 8300000, guid: 6c2e605482c55334baaf148ba36115bc, type: 3}
+  - name: Door_Openning
+    audioClip: {fileID: 8300000, guid: 843e849ec162d4d4fb8ba1297408c884, type: 3}
 --- !u!1001 &1915980652
 PrefabInstance:
   m_ObjectHideFlags: 0

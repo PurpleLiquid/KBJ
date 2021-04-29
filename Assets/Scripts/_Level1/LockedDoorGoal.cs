@@ -5,8 +5,12 @@ using UnityEngine.UI;
 public class LockedDoorGoal : Interactable
 {
     [SerializeField] bool locked = true;
+
     [SerializeField] LevelChanger fadeUI;
     [SerializeField] string nextSceneName = "";
+
+    [SerializeField] SFXManager sfx;
+    [SerializeField] string openningDoorSFX = "";
 
     [SerializeField] Text actionText;
 
@@ -26,6 +30,8 @@ public class LockedDoorGoal : Interactable
         if (locked == false)
         {
             transform.GetComponent<Animator>().SetTrigger("Open");
+            transform.GetComponent<BoxCollider>().enabled = false;
+            sfx.PlaySFX(openningDoorSFX);
             StartCoroutine(nextLevelDelay());
         }
         else
