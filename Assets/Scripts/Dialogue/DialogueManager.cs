@@ -49,4 +49,16 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.gameObject.SetActive(false);
         playerState.setPlayerFree(true);
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(ControlConstants.CONTINUE) || Input.GetMouseButtonDown(0))
+        {
+            if(dialogueBox.IsActive() == true)
+            {
+                DisplayNextSentence();
+            }
+            
+        }
+    }
 }
