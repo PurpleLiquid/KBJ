@@ -131,10 +131,10 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 164
+    value: 270
   sampleCount:
-    overrideState: 1
-    value: 16
+    overrideState: 0
+    value: 4
 --- !u!114 &5725130800693284315
 MonoBehaviour:
   m_ObjectHideFlags: 3
