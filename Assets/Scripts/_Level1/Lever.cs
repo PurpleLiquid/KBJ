@@ -3,6 +3,8 @@
 public class Lever : Interactable
 {
     [SerializeField] bool activated = false;
+    [SerializeField] string sfxName = "";
+    [SerializeField] SFXManager sfx;
 
     private Animator animator;
 
@@ -25,5 +27,10 @@ public class Lever : Interactable
     public bool IsActivated()
     {
         return activated;
+    }
+    
+    public void PlayLeverPullSound()
+    {
+        sfx.PlaySFX(sfxName);
     }
 }

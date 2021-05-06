@@ -9,8 +9,12 @@ public class FallingDeath : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        player.setPlayerFree(false);
-        StartCoroutine(ShowDeathScreen());
+        if(other.gameObject.tag == "Player")
+        {
+            player.setPlayerFree(false);
+            StartCoroutine(ShowDeathScreen());
+        }
+        
     }
 
     private IEnumerator ShowDeathScreen()
